@@ -1,3 +1,3 @@
-import AboutUs from "@/src/pages/aboutUs/AboutUs";
+import AboutUs from "@/src/modules/aboutUs/AboutUs";
 
 export default AboutUs;
