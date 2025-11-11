@@ -1,3 +1,3 @@
-export default function AdminProducts() {
-  return <h1>Welcome in products</h1>;
+export default function UserAbout() {
+  return <h1>Welcome in about</h1>;
 }
