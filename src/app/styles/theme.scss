@@ -1,0 +1,97 @@
+// SCSS theme variables and mixins
+// Usage: @use "./theme" as *;
+
+// Primitive colors
+$primary: #0f172a; // slate-900
+$secondary: #f59e0b; // amber-500
+$accent: #16a34a; // green-600
+$danger: #ef4444; // red-500
+$muted: #6b7280; // gray-500
+$surface: #ffffff;
+$background: #f8fafc;
+
+// CSS vars bridge (optional)
+:root {
+  --ring: rgba(2, 6, 23, 0.08);
+}
+
+// Spacing scale (4px baseline)
+$space-0: 0;
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem;  // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem;    // 16px
+$space-5: 1.25rem; // 20px
+$space-6: 1.5rem;  // 24px
+$space-8: 2rem;    // 32px
+$space-10: 2.5rem; // 40px
+$space-12: 3rem;   // 48px
+
+// Typography
+$font-family-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem;     // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem;  // 20px
+$line-height: 1.5;
+
+// Radius and shadows
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 14px;
+$shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+$shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+$shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+// Mixins
+@mixin container($max: 1200px) {
+  margin-inline: auto;
+  max-width: $max;
+  padding-inline: $space-4;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover-lift {
+  transition: transform .2s ease, box-shadow .2s ease;
+  &:hover { transform: translateY(-2px); box-shadow: $shadow-md; }
+}
+
+@mixin card {
+  background: $surface;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  border: 1px solid var(--ring);
+}
+
+@mixin button-reset {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin glass($bg: $surface, $alpha: .8) {
+  background: rgba($bg, $alpha);
+  backdrop-filter: blur(8px);
+}
+
+// Utility functions
+@function rgba-var($hex, $alpha) {
+  @return rgba(red($hex), green($hex), blue($hex), $alpha);
+}
