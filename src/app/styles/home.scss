@@ -1,7 +1,9 @@
 @use "app/styles/theme" as *;
+@use "sass:color";
 
 .home {
-  @include container;
+  // @include container;
+  width: 100%;
   padding-block: clamp(24px, 4vw, 48px);
 
   &__header {
@@ -37,14 +39,14 @@
       .btn-primary {
         background: $secondary;
         color: #111;
-        border: 1px solid darken($secondary, 6%);
+        border: 1px solid color.adjust($secondary, $lightness: -6%);
         border-radius: $radius-md;
         padding: 10px 16px;
         font-weight: 700;
         letter-spacing: .02em;
         @include hover-lift;
 
-        &:hover { background: darken($secondary, 4%); }
+        &:hover { background: color.adjust($secondary, $lightness: -4%); }
       }
 
       .btn-outline {

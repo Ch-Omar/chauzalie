@@ -188,17 +188,29 @@ export default function HomePage() {
         {products.map((p) => (
           <div className="col" key={p.id}>
             <div className="product-card">
-              <img className="product-card__media" src={p?.image || "/placeholder.png"} alt={p?.name || "Product"} />
+              <img
+                className="product-card__media"
+                src={typeof p.image === "string" ? p.image : "/placeholder.png"}
+                alt={p.name || "Product"}
+              />
               <div className="product-card__body">
                 <p className="name">{p.name}</p>
                 <p className="desc">{p.description}</p>
                 <div className="price-row">
                   <span className="price">{p.price} DT</span>
                   <div style={{ display: "flex", gap: 8 }}>
-                    <button className="delete" onClick={() => handleDelete(p.id)} disabled={loadingDeleteIds.has(p.id)}>
+                    <button
+                      className="delete"
+                      onClick={() => handleDelete(p.id)}
+                      disabled={loadingDeleteIds.has(p.id)}
+                    >
                       {loadingDeleteIds.has(p.id) ? "Deleting..." : "Delete"}
                     </button>
-                    <button className="btn-outline" onClick={() => openEdit(p)} disabled={loadingDeleteIds.has(p.id)}>
+                    <button
+                      className="btn-outline"
+                      onClick={() => openEdit(p)}
+                      disabled={loadingDeleteIds.has(p.id)}
+                    >
                       Edit
                     </button>
                   </div>
@@ -326,7 +338,9 @@ export default function HomePage() {
             fullWidth
             margin="dense"
             value={editProduct.name}
-            onChange={(e) => setEditProduct({ ...editProduct, name: e.target.value })}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, name: e.target.value })
+            }
           />
           <TextField
             className="field"
@@ -334,7 +348,9 @@ export default function HomePage() {
             fullWidth
             margin="dense"
             value={editProduct.description}
-            onChange={(e) => setEditProduct({ ...editProduct, description: e.target.value })}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, description: e.target.value })
+            }
           />
           <TextField
             className="field"
@@ -342,10 +358,14 @@ export default function HomePage() {
             fullWidth
             margin="dense"
             value={editProduct.price}
-            onChange={(e) => setEditProduct({ ...editProduct, price: e.target.value })}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, price: e.target.value })
+            }
           />
           <Button variant="outlined" component="label" sx={{ mt: 1, mb: 1 }}>
-            {typeof editProduct.image === "string" && editProduct.image ? "Change Image" : "Upload Image"}
+            {typeof editProduct.image === "string" && editProduct.image
+              ? "Change Image"
+              : "Upload Image"}
             <input
               type="file"
               hidden
@@ -368,7 +388,9 @@ export default function HomePage() {
             fullWidth
             margin="dense"
             value={editProduct.category}
-            onChange={(e) => setEditProduct({ ...editProduct, category: e.target.value })}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, category: e.target.value })
+            }
           />
           <TextField
             className="field"
@@ -377,7 +399,9 @@ export default function HomePage() {
             fullWidth
             margin="dense"
             value={editProduct.stock}
-            onChange={(e) => setEditProduct({ ...editProduct, stock: e.target.value })}
+            onChange={(e) =>
+              setEditProduct({ ...editProduct, stock: e.target.value })
+            }
           />
           <Button
             variant="contained"
