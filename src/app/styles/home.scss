@@ -5,6 +5,7 @@
   // @include container;
   width: 100%;
   padding-block: clamp(24px, 4vw, 48px);
+  padding-top: 64px;
 
   &__header {
     display: flex;
