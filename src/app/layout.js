@@ -1,16 +1,14 @@
-import Navbar from "../components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ClientNavbar from "../components/clientNavbar";
 
-export const metadata = {
-  title: "Admin Dashboard",
-};
+export const metadata = { title: "Dashboard" };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <ClientNavbar />
         <main>{children}</main>
-        {/* <Footer /> */}
       </body>
     </html>
   );
