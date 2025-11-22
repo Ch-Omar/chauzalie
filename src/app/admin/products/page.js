@@ -31,14 +31,13 @@ export default function HomePage() {
 
   // Load Products
   useEffect(() => {
-    const abort = new AbortController();
-    let mounted = true;
     const fetchProducts = async () => {
       try {
-        const res = await fetch("/api/products", { signal: abort.signal });
+        const res = await fetch("/api/products");
         if (!res.ok) return;
         const data = await res.json();
-        if (mounted) setProducts(data);
+
+        setProducts(data);
       } catch (err) {
         if (err.name !== "AbortError") {
           console.error(err);
@@ -172,7 +171,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="home">
+    <div className="container home">
       <div className="home__header">
         <h1 className="title">
           Shop Products <span>New</span>

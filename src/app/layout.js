@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const metadata = {
   title: "Admin Dashboard",

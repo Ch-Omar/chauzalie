@@ -8,7 +8,7 @@ export async function GET() {
 
     // Fetch products
     const [products] = await db.query(
-      "SELECT id, name, description, price, category, stock, image FROM products ORDER BY id DESC"
+      "SELECT * FROM products ORDER BY id DESC"
     );
 
     // products may be RowDataPacket[], convert to plain JSON
