@@ -1,10 +1,5 @@
-import AdminGuard from "../../../components/adminGuard";
+import AdminFeedback from "@/modules/admin/contact/contactPage";
 
-export default function ContactPage() {
-  return (
-    <AdminGuard>
-      <h1>Welcome in contact Admin</h1>);
-    </AdminGuard>
-  )
+export default function AdminContact() {
+  return <AdminFeedback />;
 }
-  

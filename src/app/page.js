@@ -1,4 +1,5 @@
 import "../styles/home.css";
+import "@/styles/globals.scss"
 
 const categories = ["PANTOUFLES", "SABOTS", "BASKETS"];
 const testImage = "/uploads/1763214670122-6eaf5d9e-ab87-461d-ac2e-555bc56177da.png";
