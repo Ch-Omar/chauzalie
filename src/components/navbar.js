@@ -18,7 +18,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <ul className={`nav-links ${open ? "open" : ""}`}>
+        <ul className={`nav-links mb-0 ${open ? "open" : ""}`}>
           <li>
             <Link href="/" onClick={close}>
               Home
