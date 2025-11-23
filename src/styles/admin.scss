@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-login {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+  }
+  
+  .btn-login {
+    background-color: #6c5ce7;
+    color: #fff;
+    &:hover {
+      background-color: #5941c4;
+    }
+  }
+  
+  .alert {
+    margin-top: 1rem;
+  }
+  
