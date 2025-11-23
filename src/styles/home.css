@@ -1,0 +1,74 @@
+/* Container row */
+.cards {
+  display: flex;
+  justify-content: center;  /* Centrer les colonnes horizontalement */
+  align-items: center;      /* Centrer verticalement si hauteur définie */
+  gap: 30px;                /* Espacement entre les images */
+  padding: 20px;       /* Un peu de padding autour */
+  flex-wrap: wrap;           /* Pour que ça reste responsive */
+  background-color: #f9f9f9; /* Fond léger pour contraste */
+}
+
+/* Colonnes */
+.card-product {
+  flex: 1 1 250px;          /* Largeur flexible mais min 250px */
+  max-width: 400px;         /* Taille max de chaque image */
+  text-align: center;
+}
+
+/* Styles généraux pour les images */
+.card-product img {
+  width: 100%;              /* L'image prend toute la largeur de sa colonne */
+  height: auto;
+  border-radius: 15px;      /* Coins arrondis */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre subtile */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Section des catégories */
+.categories-container {
+  margin-top: 30px;
+}
+
+.category {
+  text-align: left; /* Alignement à gauche */
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-left: 130px;
+}
+
+.category .cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espace entre les images */
+}
+
+.category-img {
+  width: 100%;       /* Taille réduite */
+  height: auto;
+  border-radius: 15px;      /* Coins arrondis */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre subtile */
+  transition: transform 0.3s, box-shadow 0.3s
+}
+
+/* Voir plus */
+.see-more {
+  font-weight: 500;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.see-more:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+
