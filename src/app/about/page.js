@@ -1,3 +1,5 @@
+import AdminAbout from "@/modules/user/aboutUs";
+
 export default function UserAbout() {
-  return <h1>Welcome in about</h1>;
+  return <AdminAbout />;
 }
